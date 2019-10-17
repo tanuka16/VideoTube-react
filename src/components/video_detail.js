@@ -1,4 +1,5 @@
 import React from 'react';
+import '../style/style.css';
 //instead of passdown the props everytime, just replace props attribute with video
 const VideoDetail = ({video}) =>{
 
