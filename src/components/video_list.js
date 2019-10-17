@@ -1,6 +1,6 @@
 import React from 'react';
 import VideoListItem from './video_list_items';
-
+import '../style/style.css';
 
 const VideoList = (props)=>{
 //iterate through the list of videos

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../style/style.css';
 //replace argument 'props' with destructure method('video'), which allow us to call only 1 object that we want
 //in this case we'll get the video atribute from video_list, not the entire list of videos
 const VideoListItem = ({video, onVideoSelect}) =>{
