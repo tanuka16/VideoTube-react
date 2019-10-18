@@ -3,7 +3,7 @@ import '../style/style.css';
 
 class SearchBar extends Component {
   state={
-      term:''
+      term:""
     }
     onSearchTermChange(term){
       this.setState({term})
@@ -13,8 +13,11 @@ class SearchBar extends Component {
   render(){
     return(
       <div className="search-bar">
-        <input onChange={event=> this.onSearchTermChange(event.target.value)}/>
-        value of input: {this.state.term}
+        <input
+          value={this.state.term}
+          onChange={event=> this.onSearchTermChange(event.target.value)}
+        />
+
       </div>
     )
   }
