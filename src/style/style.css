@@ -1,13 +1,24 @@
 body{
-  background-color: #FDA7DF;
+  background-color: pink;
 }
+.navbar{
+  background-color: '#E52117';
+  flex: 1;
+}
+
+.selected-video{
+  top: 120px;
+}
+
 .search-bar {
-  margin: 20px;
-  text-align: center;
+  margin-right: 400px;
+  margin-left: 100px;
+  flex: 1;
+  /* text-align: center; */
 }
 
 .search-bar input {
-  width: 75%;
+  width: 100%;
 }
 
 .video-list img {
@@ -26,6 +37,7 @@ body{
   cursor: pointer;
   margin-top: 10px;
   margin-left: 15px;
+  border-radius: 4px;
 }
 
 .list-group-item:hover {

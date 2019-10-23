@@ -5,6 +5,7 @@ import YTSearch from 'youtube-api-search';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
 
+
 const API_KEY = 'AIzaSyAyoaA4PHT2JDH8ZO6u1im-oWaRqnzLQqc';
 
 class App extends Component {
@@ -31,19 +32,30 @@ videoSearch(term) {
 
   render(){
     return(
-      <div className="App">
-        <h1>VideoTube</h1>
-        <SearchBar onSearchChange={(term)=> this.videoSearch(term)}/>
-      {/*prased data to the child*/}
-      <VideoDetail video={this.state.selectedVideo}/>
-        <div className="absolute">
-          <VideoList videos={this.state.videos}
-          onSelectedVideo={(selectedVideo) => this.setState({selectedVideo})}
-          />
+      <React.Fragment>
+        <div className="App">
+        <nav className="navbar" style={{backgroundColor: '#E52117'}}>
+          <h3>VideoTube</h3>
+          <SearchBar onSearchChange={(term)=> this.videoSearch(term)}/>
+        </nav>
+        {/*prased data to the child*/}
+        <div className="selected-video" style={{marginTop: '60px'}}>
+          <VideoDetail video={this.state.selectedVideo}/>
         </div>
-      </div>
+          <div className="absolute">
+            <VideoList videos={this.state.videos}
+            onSelectedVideo={(selectedVideo) => this.setState({selectedVideo})}
+            />
+          </div>
+        </div>
+      </React.Fragment>
     )
   }
 }
 
 export default App;
+
+//
+// <Header centerComponent={{text:"VideoTube"}}
+//         outerContainerStyles={{backgroundColor: '#E52117'}}
+// />
